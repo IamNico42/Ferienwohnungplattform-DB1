@@ -26,5 +26,13 @@ Die Anwendung ermöglicht die Verwaltung und Buchung von Ferienwohnungen. Nutzer
 ## Fazit
 Dieses Projekt ist ein **klarer, einfacher Prototyp** und bietet einen Vorgeschmack darauf, wie eine vollständige Buchungsplattform für Ferienwohnungen aussehen könnte. Es dient als Lern- und Übungsprojekt für relationale Datenbanken, SQL und Java-Programmierung.
 
+## Installation
+Unter dbsys.sql ist die dazugehörige Datenbank zu finden. Man braucht diese Tabellenstruktur damit das Programm auch richtig funktioniert und die Abfragen über die richtige Tabellen laufen.
+Unter config.sql müsst ihr die korrekte DB-URL und Anmeldedaten angeben.
+In AuthManager.java und DataBaseManager.java werden dann auf den Login zugegriffen !!ACHTUNG!! Der Login erfolgt einmal über den AuthManager für den Login Bereich und über den DatabaseManager für das Menü und die eigentlichen Funktionen in der App.
+Im Best-Practice wird das getrennt gehalten damit man nicht schon in der Loginabfrage zu viele Rechte auf anderen Tabellen hat sondern nur für die nötige Loginabfrage.
+Einfachheitshalber haben wir das nun so gestaltet, aber vollständigkeitshalber ist es integriert und lässt sich einfach erweitern.
+
+
 ---
 **HTWG Konstanz – Kurs Datenbanken 1 – Sommersemester 2025**
